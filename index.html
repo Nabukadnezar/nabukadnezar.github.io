@@ -10,7 +10,7 @@
   <style>
     :root {
       --primary: #0052cc;
-      --accent: #f07814; /* Başlık turuncusundan alınan asıl vurgu rengi */
+      --accent: #f07814;
       --bg: #f9f9f9;
       --text: #333;
       --muted: #666;
@@ -62,7 +62,7 @@
 
   <section id="about">
     <h2 data-i18n="about">Hakkımda</h2>
-    <p>25+ yıl EdTech deneyimiyle uluslararası projelerde e-öğrenme çözümleri tasarlar, ekipleri yönetir ve kesintisiz öğrenme ekosistemleri geliştiririm.</p>
+    <p data-i18n="aboutText">25+ yıl EdTech deneyimiyle uluslararası projelerde e-öğrenme çözümleri tasarlar, ekipleri yönetir ve kesintisiz öğrenme ekosistemleri geliştiririm.</p>
   </section>
 
   <section id="career">
@@ -81,29 +81,29 @@
     <h2 data-i18n="expertise">Teknik Uzmanlık</h2>
     <div class="grid two-col">
       <div>
-        <h3>Öğrenme Teknolojileri</h3>
+        <h3 data-i18n="expTech">Öğrenme Teknolojileri</h3>
         <ul>
-          <li>MOOC & LMS/LXP Mimarı</li>
-          <li>SCORM, xAPI, cmi5 Uzmanlığı</li>
-          <li>AI & Öğrenme Analitiği</li>
+          <li data-i18n="expItem1">MOOC & LMS/LXP Mimarı</li>
+          <li data-i18n="expItem2">SCORM, xAPI, cmi5 Uzmanlığı</li>
+          <li data-i18n="expItem3">AI & Öğrenme Analitiği</li>
         </ul>
       </div>
       <div>
-        <h3>Yazılım & Bulut</h3>
+        <h3 data-i18n="devCloud">Yazılım & Bulut</h3>
         <ul>
-          <li>C#, React, TypeScript, Flutter</li>
-          <li>PostgreSQL, JSON, XML</li>
-          <li>AWS, Azure, Kubernetes</li>
+          <li data-i18n="devItem1">C#, React, TypeScript, Flutter</li>
+          <li data-i18n="devItem2">PostgreSQL, JSON, XML</li>
+          <li data-i18n="devItem3">AWS, Azure, Kubernetes</li>
         </ul>
       </div>
     </div>
     <h3 data-i18n="skills">Yetenekler</h3>
     <div>
-      <p>Technical Project Management</p>
+      <p data-i18n="skill1">Technical Project Management</p>
       <div class="skill-bar"><div class="skill-fill" style="width:95%;"></div></div>
-      <p>Technical Product Management</p>
+      <p data-i18n="skill2">Technical Product Management</p>
       <div class="skill-bar"><div class="skill-fill" style="width:95%;"></div></div>
-      <p>Software Development</p>
+      <p data-i18n="skill3">Software Development</p>
       <div class="skill-bar"><div class="skill-fill" style="width:90%;"></div></div>
     </div>
   </section>
@@ -111,20 +111,20 @@
   <section id="experience">
     <h2 data-i18n="experience">Deneyim</h2>
     <ul>
-      <li><strong>2023 - Present:</strong> MOTTO Education Solutions - Sr. Technical Project Manager</li>
-      <li><strong>2022 - 2023:</strong> BİTES - Defence & Aerospace - Senior Technical Product Manager</li>
-      <li><strong>2018 - 2022:</strong> Telkraft - CTO</li>
-      <li><strong>2016 - 2018:</strong> MoNE Innovation & EdTech - Sr. Technical Product Manager</li>
-      <li><strong>2008 - 2016:</strong> RTB Education Solutions - CTO</li>
-      <li><strong>2002 - 2006:</strong> Siemens BS - Lead Software Developer</li>
-      <li><strong>1997 - 2002:</strong> SEBIT - Software Developer</li>
+      <li data-i18n="exp1"><strong>2023 - Present:</strong> MOTTO Education Solutions - Sr. Technical Project Manager</li>
+      <li data-i18n="exp2"><strong>2022 - 2023:</strong> BİTES - Defence & Aerospace - Senior Technical Product Manager</li>
+      <li data-i18n="exp3"><strong>2018 - 2022:</strong> Telkraft - CTO</li>
+      <li data-i18n="exp4"><strong>2016 - 2018:</strong> MoNE Innovation & EdTech - Sr. Technical Product Manager</li>
+      <li data-i18n="exp5"><strong>2008 - 2016:</strong> RTB Education Solutions - CTO</li>
+      <li data-i18n="exp6"><strong>2002 - 2006:</strong> Siemens BS - Lead Software Developer</li>
+      <li data-i18n="exp7"><strong>1997 - 2002:</strong> SEBIT - Software Developer</li>
     </ul>
   </section>
 
   <section id="contact">
     <h2 data-i18n="contact">İletişim</h2>
-    <p><strong>Email:</strong> <a href="mailto:cangokcay@gmail.com">cangokcay@gmail.com</a></p>
-    <p><strong>Telefon:</strong> <a href="tel:+905322646255">+90 532 264 62 55</a></p>
+    <p><strong><span data-i18n="emailLabel">Email:</span></strong> <a href="mailto:cangokcay@gmail.com">cangokcay@gmail.com</a></p>
+    <p><strong><span data-i18n="phoneLabel">Telefon:</span></strong> <a href="tel:+905322646255">+90 532 264 62 55</a></p>
   </section>
 
   <footer>
@@ -134,38 +134,80 @@
   <script>
     const translations = {
       tr: {
-        about: 'Hakkımda',
-        career: 'Kariyer Hedefleri',
-        expertise: 'Teknik Uzmanlık',
-        experience: 'Deneyim',
-        contact: 'İletişim',
         name: 'Can Gökçay',
         title: 'Öğrenme Teknolojileri Mimarı & Proje/Ürün Yöneticisi',
         motto: 'Yenilikle Öğrenmeyi Güçlendirmek',
+        about: 'Hakkımda',
+        aboutText: '25+ yıl EdTech deneyimiyle uluslararası projelerde e-öğrenme çözümleri tasarlar, ekipleri yönetir ve kesintisiz öğrenme ekosistemleri geliştiririm.',
+        career: 'Kariyer Hedefleri',
         obj1: 'Yapay Zeka Destekli Öğrenme Platformları Geliştirme',
         obj2: 'LMS/LXP İnteroperabilitesini ve Otomasyonu Artırma',
         obj3: 'Küresel Stratejik Ortaklıklar Kurma',
         obj4: 'AR/VR/MR ile İmmersif Deneyimler Tasarlama',
         obj5: 'Blockchain ile Güvenli Öğrenme Kayıtları',
         obj6: 'Dijital Dönüşümde Yol Gösterici Olma',
-        skills: 'Yetenekler'
+        expertise: 'Teknik Uzmanlık',
+        expTech: 'Öğrenme Teknolojileri',
+        expItem1: 'MOOC & LMS/LXP Mimarı',
+        expItem2: 'SCORM, xAPI, cmi5 Uzmanlığı',
+        expItem3: 'AI & Öğrenme Analitiği',
+        devCloud: 'Yazılım & Bulut',
+        devItem1: 'C#, React, TypeScript, Flutter',
+        devItem2: 'PostgreSQL, JSON, XML',
+        devItem3: 'AWS, Azure, Kubernetes',
+        skills: 'Yetenekler',
+        skill1: 'Technical Project Management',
+        skill2: 'Technical Product Management',
+        skill3: 'Software Development',
+        experience: 'Deneyim',
+        exp1: '2023 - Present: MOTTO Education Solutions - Sr. Technical Project Manager',
+        exp2: '2022 - 2023: BİTES - Defence & Aerospace - Senior Technical Product Manager',
+        exp3: '2018 - 2022: Telkraft - CTO',
+        exp4: '2016 - 2018: MoNE Innovation & EdTech - Sr. Technical Product Manager',
+        exp5: '2008 - 2016: RTB Education Solutions - CTO',
+        exp6: '2002 - 2006: Siemens BS - Lead Software Developer',
+        exp7: '1997 - 2002: SEBIT - Software Developer',
+        contact: 'İletişim',
+        emailLabel: 'Email:',
+        phoneLabel: 'Telefon:'
       },
       en: {
-        about: 'About Me',
-        career: 'Career Objectives',
-        expertise: 'Technical Expertise',
-        experience: 'Experience',
-        contact: 'Contact',
         name: 'Can Gökçay',
         title: 'Learning Technologies Architect & Project/Product Manager',
         motto: '"Empowering Learning Through Innovation"',
+        about: 'About Me',
+        aboutText: 'With 25+ years in EdTech, I design and manage innovative e-learning solutions, lead teams, and develop seamless learning ecosystems.',
+        career: 'Career Objectives',
         obj1: 'Develop AI-powered Learning Platforms',
         obj2: 'Enhance LMS/LXP Interoperability & Automation',
         obj3: 'Expand Global Partnerships',
         obj4: 'Design Immersive Experiences',
         obj5: 'Secure Learning Records with Blockchain',
         obj6: 'Lead Digital Transformation',
-        skills: 'Skills'
+        expertise: 'Technical Expertise',
+        expTech: 'Learning Technologies',
+        expItem1: 'MOOC & LMS/LXP Architect',
+        expItem2: 'SCORM, xAPI, cmi5 Expert',
+        expItem3: 'AI & Learning Analytics',
+        devCloud: 'Development & Cloud',
+        devItem1: 'C#, React, TypeScript, Flutter',
+        devItem2: 'PostgreSQL, JSON, XML',
+        devItem3: 'AWS, Azure, Kubernetes',
+        skills: 'Skills',
+        skill1: 'Technical Project Management',
+        skill2: 'Technical Product Management',
+        skill3: 'Software Development',
+        experience: 'Experience',
+        exp1: '2023 - Present: MOTTO Education Solutions - Sr. Technical Project Manager',
+        exp2: '2022 - 2023: BİTES - Defence & Aerospace - Senior Technical Product Manager',
+        exp3: '2018 - 2022: Telkraft - CTO',
+        exp4: '2016 - 2018: MoNE Innovation & EdTech - Sr. Technical Product Manager',
+        exp5: '2008 - 2016: RTB Education Solutions - CTO',
+        exp6: '2002 - 2006: Siemens BS - Lead Software Developer',
+        exp7: '1997 - 2002: SEBIT - Software Developer',
+        contact: 'Contact',
+        emailLabel: 'Email:',
+        phoneLabel: 'Phone:'
       }
     };
     const elements = document.querySelectorAll('[data-i18n]');
