@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Can Gökçay | Öğrenme Teknolojileri Mimarı</title>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet" />
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body { font-family: 'Roboto', sans-serif; line-height: 1.6; background: #f9f9f9; color: #333; }
+    header { background: #1a1a2e; color: #fff; padding: 4rem 2rem; text-align: center; position: relative; }
+    header h1 { font-size: 2.5rem; }
+    header p { font-size: 1.2rem; margin-top: 0.5rem; }
+    .language-switcher {
+      position: absolute;
+      top: 1rem;
+      right: 2rem;
+    }
+    .language-switcher button {
+      margin-left: 0.5rem;
+      padding: 0.3rem 0.6rem;
+      border: none;
+      background: #ff6700;
+      color: white;
+      cursor: pointer;
+      border-radius: 4px;
+    }
+    section { padding: 3rem 2rem; max-width: 960px; margin: 0 auto; }
+    h2 { color: #1a1a2e; margin-bottom: 1rem; }
+    .timeline { border-left: 3px solid #ff6700; padding-left: 1.5rem; }
+    .timeline-entry { margin-bottom: 1rem; }
+    .skills-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1rem; margin-top: 1rem; }
+    .contact { background: #1a1a2e; color: #fff; text-align: center; padding: 2rem; }
+    .contact p { margin: 0.5rem 0; }
+    .tag-cloud span { display: inline-block; background: #e0e0e0; padding: 0.5rem 1rem; border-radius: 20px; margin: 0.3rem; font-size: 0.9rem; }
+    .tr, .en { display: none; }
+    body.tr .tr { display: block; }
+    body.en .en { display: block; }
+  </style>
+</head>
+<body class="tr">
+  <header>
+    <div class="language-switcher">
+      <button onclick="switchLanguage('tr')">TR</button>
+      <button onclick="switchLanguage('en')">EN</button>
+    </div>
+    <h1>Can Gökçay</h1>
+    <p>Learning Technologies Architect | Product & Project Manager</p>
+    <p>"Verimlilikle Dönüşen Öğrenme Deneyimleri için Danışmanlık"</p>
+  </header>
+
+  <section class="tr">
+    <h2>Hakkımda</h2>
+    <p>25+ yıllık EdTech deneyimiyle yenilikçi e-öğrenme çözümleri tasarlıyor, disiplinlerarası ekipler yönetiyor ve ölçeklenebilir öğrenme sistemleri geliştiriyorum. 50'den fazla ulusal ve uluslararası projede aktif rol aldım.</p>
+  </section>
+  <section class="en">
+    <h2>About Me</h2>
+    <p>With 25+ years in the EdTech industry, I design and manage innovative e-learning solutions, lead cross-functional teams, and integrate cutting-edge technologies into scalable learning ecosystems. I have played key roles in 50+ national and international projects.</p>
+  </section>
+
+  <section class="tr">
+    <h2>Kariyer Hedefleri</h2>
+    <ul>
+      <li><strong>Yeni Nesil EdTech:</strong> Gerçek zamanlı adapte olan, yapay zekâ destekli platformlar geliştirmek.</li>
+      <li><strong>LMS/LXP Entegrasyonu:</strong> Öğrenme sistemleri arasında otomasyon ve veri uyumunu sağlamak.</li>
+      <li><strong>Çevik Liderlik:</strong> Küresel çapta disiplinlerarası ekipler yönetmek.</li>
+      <li><strong>Küresel Yayılım:</strong> Gelişmekte olan pazarlarda EdTech çözümlerini yaygınlaştırmak.</li>
+      <li><strong>Dijital Dönüşüm:</strong> xAPI, öğrenme analitiği ve blockchain ile veri temelli sistemler inşa etmek.</li>
+    </ul>
+  </section>
+  <section class="en">
+    <h2>Career Objectives</h2>
+    <ul>
+      <li><strong>Next-Gen EdTech:</strong> Develop AI-powered, immersive, and scalable learning platforms that adapt to user needs in real time.</li>
+      <li><strong>LMS/LXP Optimization:</strong> Streamline interoperability and workflow automation across learning ecosystems.</li>
+      <li><strong>Agile Leadership:</strong> Lead cross-functional, global teams using Agile, Scrum, and hybrid methodologies.</li>
+      <li><strong>Global Expansion:</strong> Drive international collaborations to increase EdTech adoption in emerging markets.</li>
+      <li><strong>Digital Learning Transformation:</strong> Use xAPI, learning analytics, and blockchain to build data-driven, adaptive education systems.</li>
+    </ul>
+  </section>
+
+  <!-- Diğer bölümler aynı şekilde Türkçe ve İngilizce olarak bölünebilir -->
+
+  <section class="contact">
+    <h2>Contact | İletişim</h2>
+    <p>📞 +90 532 264 62 55</p>
+    <p>📧 cangokcay@gmail.com</p>
+  </section>
+
+  <script>
+    function switchLanguage(lang) {
+      document.body.className = lang;
+    }
+  </script>
+</body>
+</html>
