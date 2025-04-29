@@ -1,96 +1,184 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="tr">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Can Gökçay | Learning Technologies Architect</title>
-  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
   <style>
+    :root {
+      --primary: #0052cc;
+      --accent: #f07814; /* Başlık turuncusundan alınan asıl vurgu rengi */
+      --bg: #f9f9f9;
+      --text: #333;
+      --muted: #666;
+      --transition: 0.3s;
+    }
     * { margin: 0; padding: 0; box-sizing: border-box; }
-    body { font-family: 'Roboto', sans-serif; line-height: 1.6; background: #f9f9f9; color: #333; }
-    header { background: #1a1a2e; color: #fff; padding: 4rem 2rem; text-align: center; }
-    header h1 { font-size: 2.5rem; }
-    header p { font-size: 1.2rem; margin-top: 0.5rem; }
-    section { padding: 3rem 2rem; max-width: 960px; margin: 0 auto; }
-    h2 { color: #1a1a2e; margin-bottom: 1rem; }
-    .timeline { border-left: 3px solid #ff6700; padding-left: 1.5rem; }
-    .timeline-entry { margin-bottom: 1rem; }
-    .skills-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1rem; margin-top: 1rem; }
-    .contact { background: #1a1a2e; color: #fff; text-align: center; padding: 2rem; }
-    .contact p { margin: 0.5rem 0; }
-    .tag-cloud span { display: inline-block; background: #e0e0e0; padding: 0.5rem 1rem; border-radius: 20px; margin: 0.3rem; font-size: 0.9rem; }
+    html { scroll-behavior: smooth; }
+    body { font-family: 'Inter', sans-serif; background: var(--bg); color: var(--text); line-height: 1.6; }
+    header { background: var(--primary); color: #fff; padding: 4rem 2rem; text-align: center; position: relative; }
+    header .lang-switch { position: absolute; top: 1rem; right: 2rem; }
+    header h1 { font-size: 3rem; margin-bottom: 0.5rem; }
+    header p.motto { font-size: 1.25rem; font-style: italic; }
+    nav { position: sticky; top: 0; background: #fff; box-shadow: 0 2px 5px rgba(0,0,0,0.1); z-index: 100; }
+    nav ul { display: flex; justify-content: center; gap: 2rem; padding: 1rem; }
+    nav a { text-decoration: none; color: var(--text); font-weight: 600; transition: color var(--transition); }
+    nav a:hover { color: var(--accent); }
+    section { padding: 4rem 2rem; max-width: 900px; margin: auto; }
+    section h2 { font-size: 2rem; margin-bottom: 1rem; color: var(--accent); }
+    .grid { display: grid; gap: 1.5rem; }
+    .two-col { grid-template-columns: 1fr 1fr; }
+    .skill-bar { background: #e0e0e0; border-radius: 4px; overflow: hidden; }
+    .skill-fill { height: 8px; background: var(--accent); }
+    footer { background: #fff; text-align: center; padding: 2rem; border-top: 1px solid #e0e0e0; }
+    @media(max-width: 700px) { .two-col { grid-template-columns: 1fr; } }
   </style>
 </head>
 <body>
+  <nav>
+    <ul>
+      <li><a href="#about" data-i18n="about">Hakkımda</a></li>
+      <li><a href="#career" data-i18n="career">Kariyer Hedefleri</a></li>
+      <li><a href="#expertise" data-i18n="expertise">Teknik Uzmanlık</a></li>
+      <li><a href="#experience" data-i18n="experience">Deneyim</a></li>
+      <li><a href="#contact" data-i18n="contact">İletişim</a></li>
+    </ul>
+  </nav>
+
   <header>
-    <h1>Can Gökçay</h1>
-    <p>Learning Technologies Architect | Product & Project Manager</p>
-    <p>"Verimlilikle Dönüşen Öğrenme Deneyimleri için Danışmanlık"</p>
+    <div class="lang-switch">
+      <select id="langToggle">
+        <option value="tr">TR</option>
+        <option value="en">EN</option>
+      </select>
+    </div>
+    <h1 data-i18n="name">Can Gökçay</h1>
+    <p data-i18n="title">Öğrenme Teknolojileri Mimarı & Proje/Ürün Yöneticisi</p>
+    <p class="motto" data-i18n="motto">Yenilikle Öğrenmeyi Güçlendirmek</p>
   </header>
 
-  <section>
-    <h2>About Me</h2>
-    <p>With 25+ years in the EdTech industry, I design and manage innovative e-learning solutions, lead cross-functional teams, and integrate cutting-edge technologies into scalable learning ecosystems. I have played key roles in 50+ national and international projects, specializing in AI-driven learning, immersive tech, and data-driven analytics.</p>
+  <section id="about">
+    <h2 data-i18n="about">Hakkımda</h2>
+    <p>25+ yıl EdTech deneyimiyle uluslararası projelerde e-öğrenme çözümleri tasarlar, ekipleri yönetir ve kesintisiz öğrenme ekosistemleri geliştiririm.</p>
   </section>
 
-  <section>
-    <h2>Career Objectives</h2>
-    <ul>
-      <li><strong>Next-Gen EdTech:</strong> Develop AI-powered, immersive, and scalable learning platforms that adapt to user needs in real time.</li>
-      <li><strong>LMS/LXP Optimization:</strong> Streamline interoperability and workflow automation across learning ecosystems.</li>
-      <li><strong>Agile Leadership:</strong> Lead cross-functional, global teams using Agile, Scrum, and hybrid methodologies.</li>
-      <li><strong>Global Expansion:</strong> Drive international collaborations to increase EdTech adoption in emerging markets.</li>
-      <li><strong>Digital Learning Transformation:</strong> Use xAPI, learning analytics, and blockchain to build data-driven, adaptive education systems.</li>
+  <section id="career">
+    <h2 data-i18n="career">Kariyer Hedefleri</h2>
+    <ul class="grid two-col">
+      <li data-i18n="obj1">Yapay Zeka Destekli Öğrenme Platformları Geliştirme</li>
+      <li data-i18n="obj2">LMS/LXP İnteroperabilitesini ve Otomasyonu Artırma</li>
+      <li data-i18n="obj3">Küresel Stratejik Ortaklıklar Kurma</li>
+      <li data-i18n="obj4">AR/VR/MR ile İmmersif Deneyimler Tasarlama</li>
+      <li data-i18n="obj5">Blockchain ile Güvenli Öğrenme Kayıtları</li>
+      <li data-i18n="obj6">Dijital Dönüşümde Yol Gösterici Olma</li>
     </ul>
   </section>
 
-  <section>
-    <h2>Professional Experience</h2>
-    <div class="timeline">
-      <div class="timeline-entry"><strong>2023 - Present:</strong> MOTTO Education Solutions - Senior Technical Project Manager</div>
-      <div class="timeline-entry"><strong>2022 - 2023:</strong> BİTES Defence - Senior Technical Product Manager</div>
-      <div class="timeline-entry"><strong>2018 - 2022:</strong> TELKRAFT - Chief Technology Officer</div>
-      <div class="timeline-entry"><strong>2016 - 2018:</strong> MoNE - Senior Technical Product Manager</div>
+  <section id="expertise">
+    <h2 data-i18n="expertise">Teknik Uzmanlık</h2>
+    <div class="grid two-col">
+      <div>
+        <h3>Öğrenme Teknolojileri</h3>
+        <ul>
+          <li>MOOC & LMS/LXP Mimarı</li>
+          <li>SCORM, xAPI, cmi5 Uzmanlığı</li>
+          <li>AI & Öğrenme Analitiği</li>
+        </ul>
+      </div>
+      <div>
+        <h3>Yazılım & Bulut</h3>
+        <ul>
+          <li>C#, React, TypeScript, Flutter</li>
+          <li>PostgreSQL, JSON, XML</li>
+          <li>AWS, Azure, Kubernetes</li>
+        </ul>
+      </div>
+    </div>
+    <h3 data-i18n="skills">Yetenekler</h3>
+    <div>
+      <p>Technical Project Management</p>
+      <div class="skill-bar"><div class="skill-fill" style="width:95%;"></div></div>
+      <p>Technical Product Management</p>
+      <div class="skill-bar"><div class="skill-fill" style="width:95%;"></div></div>
+      <p>Software Development</p>
+      <div class="skill-bar"><div class="skill-fill" style="width:90%;"></div></div>
     </div>
   </section>
 
-  <section>
-    <h2>Technical Expertise</h2>
-    <div class="skills-grid">
-      <div><strong>Learning Technologies</strong><br> MOOC design, SCORM 1.2/2004, xAPI, cmi5, Adaptive Learning Systems</div>
-      <div><strong>Immersive Environments</strong><br> VR/AR/MR simulations, Digital Twin integrations, AI-powered training</div>
-      <div><strong>Software Development</strong><br> C#, JavaScript, React, TypeScript, Flutter, Dart; PostgreSQL, SQL Server</div>
-      <div><strong>Cloud & Open Source</strong><br> AWS, Azure, Docker, Kubernetes, Open EdTech APIs</div>
-      <div><strong>Project Management</strong><br> Agile, Scrum, Kanban; Jira, Confluence, MS Project, Notion</div>
-      <div><strong>Learning Analytics</strong><br> xAPI tracking, dashboards, personalization engines, data-driven feedback</div>
-    </div>
-  </section>
-
-  <section>
-    <h2>Achievements</h2>
+  <section id="experience">
+    <h2 data-i18n="experience">Deneyim</h2>
     <ul>
-      <li>Led AI-based EBA platform (10M+ users)</li>
-      <li>GovStack Learning Project – ITU Partnership</li>
-      <li>Designed AI learning platform for defense</li>
-      <li>NeyimVar health app – 2M+ users</li>
+      <li><strong>2023 - Present:</strong> MOTTO Education Solutions - Sr. Technical Project Manager</li>
+      <li><strong>2022 - 2023:</strong> BİTES - Defence & Aerospace - Senior Technical Product Manager</li>
+      <li><strong>2018 - 2022:</strong> Telkraft - CTO</li>
+      <li><strong>2016 - 2018:</strong> MoNE Innovation & EdTech - Sr. Technical Product Manager</li>
+      <li><strong>2008 - 2016:</strong> RTB Education Solutions - CTO</li>
+      <li><strong>2002 - 2006:</strong> Siemens BS - Lead Software Developer</li>
+      <li><strong>1997 - 2002:</strong> SEBIT - Software Developer</li>
     </ul>
   </section>
 
-  <section>
-    <h2>Emerging Tech Interests</h2>
-    <div class="tag-cloud">
-      <span>AI-driven Learning</span>
-      <span>Blockchain in EdTech</span>
-      <span>Low-Code/No-Code Tools</span>
-      <span>Immersive Learning</span>
-      <span>Digital Twin</span>
-    </div>
+  <section id="contact">
+    <h2 data-i18n="contact">İletişim</h2>
+    <p><strong>Email:</strong> <a href="mailto:cangokcay@gmail.com">cangokcay@gmail.com</a></p>
+    <p><strong>Telefon:</strong> <a href="tel:+905322646255">+90 532 264 62 55</a></p>
   </section>
 
-  <section class="contact">
-    <h2>Contact</h2>
-    <p>📞 +90 532 264 62 55</p>
-    <p>📧 cangokcay@gmail.com</p>
-  </section>
+  <footer>
+    <p>&copy; 2025 Can Gökçay</p>
+  </footer>
+
+  <script>
+    const translations = {
+      tr: {
+        about: 'Hakkımda',
+        career: 'Kariyer Hedefleri',
+        expertise: 'Teknik Uzmanlık',
+        experience: 'Deneyim',
+        contact: 'İletişim',
+        name: 'Can Gökçay',
+        title: 'Öğrenme Teknolojileri Mimarı & Proje/Ürün Yöneticisi',
+        motto: 'Yenilikle Öğrenmeyi Güçlendirmek',
+        obj1: 'Yapay Zeka Destekli Öğrenme Platformları Geliştirme',
+        obj2: 'LMS/LXP İnteroperabilitesini ve Otomasyonu Artırma',
+        obj3: 'Küresel Stratejik Ortaklıklar Kurma',
+        obj4: 'AR/VR/MR ile İmmersif Deneyimler Tasarlama',
+        obj5: 'Blockchain ile Güvenli Öğrenme Kayıtları',
+        obj6: 'Dijital Dönüşümde Yol Gösterici Olma',
+        skills: 'Yetenekler'
+      },
+      en: {
+        about: 'About Me',
+        career: 'Career Objectives',
+        expertise: 'Technical Expertise',
+        experience: 'Experience',
+        contact: 'Contact',
+        name: 'Can Gökçay',
+        title: 'Learning Technologies Architect & Project/Product Manager',
+        motto: '"Empowering Learning Through Innovation"',
+        obj1: 'Develop AI-powered Learning Platforms',
+        obj2: 'Enhance LMS/LXP Interoperability & Automation',
+        obj3: 'Expand Global Partnerships',
+        obj4: 'Design Immersive Experiences',
+        obj5: 'Secure Learning Records with Blockchain',
+        obj6: 'Lead Digital Transformation',
+        skills: 'Skills'
+      }
+    };
+    const elements = document.querySelectorAll('[data-i18n]');
+    function updateLanguage(lang) {
+      elements.forEach(el => {
+        const key = el.getAttribute('data-i18n');
+        if (translations[lang] && translations[lang][key]) {
+          el.textContent = translations[lang][key];
+        }
+      });
+    }
+    document.getElementById('langToggle').addEventListener('change', e => updateLanguage(e.target.value));
+    updateLanguage(document.getElementById('langToggle').value);
+  </script>
 </body>
 </html>
